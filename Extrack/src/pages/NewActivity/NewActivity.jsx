@@ -1,8 +1,9 @@
 import './NewActivity.css'
+import ActivityForm from '../../components/ActivityForm/ActivityForm'
 
 const NewActivity = () => {
   return (
-    <div>NewActivity</div>
+    <div><ActivityForm /></div>
   )
 }
 

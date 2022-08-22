@@ -2,44 +2,31 @@ import React, { useEffect, useState } from 'react';
 import { appendErrors, useForm } from 'react-hook-form';
 import axiosInstance from '../../configs/axios'
 import { useNavigate } from 'react-router-dom';
-import './ActivityForum.scss'
+import './EditActivityForm.scss'
 
 
-
-const ActivityForm = () => {
+const EditActivityForm = ({activity_id, selectedActivity, setSelectedActivity}) => {
+    const { register, handleSubmit, formState: { errors }, reset, setValue } = useForm({defaultValues: selectedActivity});
+  
     const navigate = useNavigate()
-    const { register, handleSubmit, formState: { errors }, reset, setValue } = useForm();
-    const {selectedActivity,setSelectedActivity} = useState([]);
-    const login = () => {
-        axiosInstance.post('auth/signin', {
-            username: 'lnwza',
-            password: '12345',
-            email: 'lnwza@gmail.com'
-        }).then(() => console.log('login success')).catch(() => console.log('login failed'))
+    
+    const updateActivity = data => {
+        axiosInstance.patch(`user/activities/${activity_id}`, data) 
+        .then(() => {
+            setSelectedActivity(data)
+            reset()
+        }).then(() => {
+            navigate("../activities");
+        })
     }
-    const onSubmit = data => {
-        axiosInstance.post('user/activities', data)
-            .then(() => {
-                setSelectedActivity(data);
-               reset ()
-            })
-            .then(()=>
-            navigate('../activites'))
-    }
-    useEffect(() => {
-        login();
-    }, []);
-    // const onSubmit = data => {
-    //   console.log(data)
-    //         }
-
+    
 
     // const isEdit = false- ไว้เขียน params c้heck เอา
     return (
         <div className='box'>
-            <div className='acivityform-container'>
-                <h1>New Activity</h1>
-                <form onSubmit={handleSubmit(onSubmit)}>
+            <div className='editform-container'>
+                <h1>Update Activity</h1>
+                <form onSubmit={handleSubmit(updateActivity)}>
                     {/* <label for="activity_type">Activity Type</label><br /> */}
                     <select {...register("activity_type", { required: true })}>
                         <option value="">Activity Type</option>
@@ -66,16 +53,16 @@ const ActivityForm = () => {
                     {errors.date && <p className='error'>Please enter the date</p>}
                     <br />
                     {/* <label for="duration">Duration</label><br /> */}
-                    <input type="number" placeholder='type your duration'  {...register("duration",{min: {value:0 }, required: true})}/>
-                    {errors.duration && <p className='error'>Duration can't be zero</p>}
-                    <br/>
+                    <input type="number" placeholder='duration(minutes)'  {...register("duration", { min: { value: 0, message: "duration can't be zero" } })} />
+                    <p className='error'>{errors.duration?.message}</p>
+                    {/* <br/> */}
                     {/* <label for="comment">Description</label><br /> */}
                     <textarea placeholder='Comment' {...register("comment")}></textarea>
                     <br />
-                    <button>Add Activity</button>
+                    <button>Update Activity</button>
                 </form>
             </div>
         </div>
     )
 }
-export default ActivityForm;
+export default EditActivityForm;
