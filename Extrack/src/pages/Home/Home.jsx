@@ -15,7 +15,7 @@ function homePage() {
           <p>Make your life better with our help!</p>
           <ButtonHomePage />
         </div>
-        <img src="../../../public/assets/urban-line-woman-in-yoga-pose-line.gif" alt="" />
+        <img src="./public/assets/urban-line-woman-in-yoga-pose-line.gif" alt="" />
       </section>
 
       <section className="subcon2">
@@ -29,14 +29,14 @@ function homePage() {
           </div>
         </div>
         <div className="mid-subcon2">
-          <img src='../../../public/assets/Homepage-2.png' alt="" /> 
+          <img src='./assets/Homepage-2.png' alt="" /> 
           <h1>Keeping yourself motivated</h1>
           <p>
             Can set your goal and inspirations to motivate yourself.
           </p>
         </div>
         <div className="right-subcon2">
-        <img src='../../../public/assets/Homepage-3.png' alt="" /> 
+        <img src='./assets/Homepage-3.png' alt="" /> 
           <h1>Crate your own lifestyle</h1>
           <p>
             Feel free to create your own workout lifestyle.
@@ -46,7 +46,7 @@ function homePage() {
 
       <section className="subcon3">
         <div className="body-subcon3">
-          <img src="../../../public/assets/Homepage-4.png" alt="" /> 
+          <img src="./assets/Homepage-4.png" alt="" /> 
           <div className="content-subcon3">
             <h1>The pain you feel today will be the strength you feel tomorrow</h1>
             <p>
