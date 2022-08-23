@@ -1,8 +1,9 @@
 import './Setting.css'
+// import SettingForm from '../../components/Setting/Setting'
 
 const Setting = () => {
   return (
-    <div>Setting</div>
+    <div><h1>Hello</h1></div>
   )
 }
 

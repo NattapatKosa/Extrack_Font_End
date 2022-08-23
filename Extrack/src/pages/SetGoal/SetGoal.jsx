@@ -1,8 +1,8 @@
 import './SetGoal.css'
-
+import SetGoalForm from '../../components/SetGoalForm/SetGoalForm'
 const SetGoal = () => {
   return (
-    <div>SetGoal</div>
+    <div><SetGoalForm/></div>
   )
 }
 

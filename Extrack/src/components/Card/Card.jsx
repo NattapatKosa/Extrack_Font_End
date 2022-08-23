@@ -1,5 +1,5 @@
 import React from 'react'
-import './Card.css'
+import './Card.scss'
 import { useState } from 'react';
 import {useNavigate} from 'react-router-dom'
 export default function Card({card, onRemove}) {

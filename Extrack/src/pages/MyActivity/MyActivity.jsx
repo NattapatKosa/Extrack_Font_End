@@ -1,4 +1,4 @@
-import './MyActivity.css'
+import './MyActivity.scss'
 import { useState } from 'react'
 import CartList from '../../components/CartList/CardList'
 import { useEffect } from 'react'

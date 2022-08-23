@@ -4,13 +4,12 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 
 
-// import NavBar from './components/NavBar/NavBar'
+import NavBar from './components/NavBar/NavBar'
 
 import Home from './pages/Home/Home';
 import Dashboard from './pages/Dashboard/Dashboard';
 import MyActivity from './pages/MyActivity/MyActivity';
 import NewActivity from './pages/NewActivity/NewActivity';
-import Community from './pages/Community/Community';
 import Setting from './pages/Setting/Setting';
 import { default as SetGoalPage } from './pages/SetGoal/SetGoal';
 import SignIn from './pages/SignIn/SignIn';
@@ -27,14 +26,13 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        {/* <NavBar /> */}
+        <NavBar />
         <Routes>
           <Route path='/' element={<Home/>}/>
           <Route path='/dashboard' element={<Dashboard />}/>
           <Route path='/activities' element={<MyActivity/>}/>
-          <Route path='/community' element={<Community />}/>
           <Route path='/Setting' element={<Setting />}/>
-          <Route path='/new-activity' element={<NewActivity />}/>
+          <Route path='/new' element={<NewActivity />}/>
           <Route path='/edit/:activity_id' element={<EditActivity />}/>
           <Route path='/signin' element={<SignIn />}/>
           <Route path='/signup' element={<SignUp />} />

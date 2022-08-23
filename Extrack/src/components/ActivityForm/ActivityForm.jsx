@@ -9,10 +9,10 @@ import './ActivityForum.scss'
 const ActivityForm = () => {
     const navigate = useNavigate()
     const { register, handleSubmit, formState: { errors }, reset, setValue } = useForm();
-    const {selectedActivity,setSelectedActivity} = useState([]);
+    // const [selectedActivity, setSelectedActivity]   = useState([]);
     const login = () => {
         axiosInstance.post('auth/signin', {
-            username: 'lnwza',
+            username: 'lnwza',  
             password: '12345',
             email: 'lnwza@gmail.com'
         }).then(() => console.log('login success')).catch(() => console.log('login failed'))
@@ -20,11 +20,12 @@ const ActivityForm = () => {
     const onSubmit = data => {
         axiosInstance.post('user/activities', data)
             .then(() => {
-                setSelectedActivity(data);
-               reset ()
+                // setSelectedActivity(data);
+                // console.log(selectedActivity)
+                reset();
             })
-            .then(()=>
-            navigate('../activites'))
+            .then(() =>
+                navigate('../activities'))
     }
     useEffect(() => {
         login();
@@ -66,9 +67,9 @@ const ActivityForm = () => {
                     {errors.date && <p className='error'>Please enter the date</p>}
                     <br />
                     {/* <label for="duration">Duration</label><br /> */}
-                    <input type="number" placeholder='type your duration'  {...register("duration",{min: {value:0 }, required: true})}/>
+                    <input type="number" placeholder='type your duration'  {...register("duration", { min: { value: 0 }, required: true })} />
                     {errors.duration && <p className='error'>Duration can't be zero</p>}
-                    <br/>
+                    <br />
                     {/* <label for="comment">Description</label><br /> */}
                     <textarea placeholder='Comment' {...register("comment")}></textarea>
                     <br />
