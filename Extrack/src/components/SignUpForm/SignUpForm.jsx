@@ -27,7 +27,7 @@ const  SignUpForm = () => {
     return (
         <div className='regis-form'>
             <form onSubmit={handleSubmit(onSubmit)}>
-                <img src='../../../public/assets/SignInImage.png' alt="pic" />
+                <img src='./assets/SignInImage.png' alt="pic" />
                 <h2>Create Account</h2>
                 <input {...register('username', { required: true, minLength: 6, maxLength: 15 })} id='username' placeholder='Username' /><br />
                 {errors.username && errors.username.type === 'required' && <span>Invalid or empty username.</span>}
