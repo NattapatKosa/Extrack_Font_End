@@ -9,7 +9,7 @@ const SignIn = () => {
     return (
         <div className="signinform-container">
             {/* <NavBar/> */}
-            <img src='../../../public/assets/SignInImage.png' alt="pic" />
+            <img src='./assets/SignInImage.png' alt="pic" />
             <SignInForm />
         </div>
     )
