@@ -20,7 +20,7 @@ function homePage() {
 
       <section className="subcon2">
         <div className="left-subcon2">
-          <img src='../../../public/assets/Homepage-1.png' alt="" /> 
+          <img src='./assets/Homepage-1.png' alt="" /> 
           <div className="subcon2-content">
             <h1>Easy to access </h1>
             <p>
