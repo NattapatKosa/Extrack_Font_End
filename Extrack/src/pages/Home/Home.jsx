@@ -46,7 +46,7 @@ function homePage() {
 
       <section className="subcon3">
         <div className="body-subcon3">
-          <img src="./assets/Homepage-4.png" alt="" /> 
+          <img src="./assets/HomePage-4.png" alt="" /> 
           <div className="content-subcon3">
             <h1>The pain you feel today will be the strength you feel tomorrow</h1>
             <p>
