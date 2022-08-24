@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { appendErrors, useForm } from 'react-hook-form';
-import { useNavigate } from "react-router-dom";
+import { useNavigate,Link } from "react-router-dom";
 import axiosInstance from '../../configs/axios'
 import './SignInForm.scss'
 import '../NavBar/NavBar'
@@ -43,7 +43,7 @@ const SignInForm = () => {
                     {errors.password && <p className='error'>Please enter password</p>}
                     <br />
                     <button>Sign In</button>
-                    <h5>Don't have an account? <a href='/signup'>Sign up</a></h5>
+                    <h5>Don't have an account? <span><Link to='/signup'>Sign up</Link></span></h5>
                 </form>
             </div>
 
