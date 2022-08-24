@@ -86,8 +86,8 @@ const BarChart = ({ dailyStats, loading }) => {
 
         <Chart
           type="bar"
-          width={452}
-          height={268}
+          width={650}
+          height={387}
           series={[
             {
               name: "Total Duration",
@@ -105,7 +105,7 @@ const BarChart = ({ dailyStats, loading }) => {
               style: { fontSize: 18 },
             },
 
-            colors: ["#515A5A"],  //สีกราฟแท่ง 
+            colors: ["#22345C"],  //สีกราฟแท่ง 
             theme: { mode: "light" },
 
             xaxis: {
@@ -113,7 +113,7 @@ const BarChart = ({ dailyStats, loading }) => {
               categories: trackingName,
               title: {
                 text: "Day per week",
-                style: { color: "#F1C40F", fontSize: 17 },  //สีชื่อแกน x
+                style: { color: "#040404", fontSize: 17 },  //สีชื่อแกน x
               },
             },
 
@@ -126,7 +126,7 @@ const BarChart = ({ dailyStats, loading }) => {
               },
               title: {
                 text: "Time (minute)",
-                style: { color: "#F1C40F", fontSize: 17 },  //สีแกน y
+                style: {color: "#040404", fontSize: 17 },  //สีแกน y
               },
             },
 

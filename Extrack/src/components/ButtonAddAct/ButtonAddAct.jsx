@@ -9,7 +9,7 @@ function ButtonAddAct() {
   return (
     <div>
       <a href='/new'>
-        <img src="./assets/akar-icons_circle-plus-fill.png" alt="" style={buttonSize}/>
+        <img src="./assets/plus-sign.png" alt="" style={buttonSize}/>
       </a>
     </div>
   );

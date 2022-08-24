@@ -19,7 +19,7 @@ const EditActivity = () => {
 
     return (
         <div className="new-activity">
-        <h1>Update Activity</h1>
+        {/* <h1>Update Activity</h1> */}
         { selectedActivity &&
           <EditActivityForm
             activity_id={activity_id}

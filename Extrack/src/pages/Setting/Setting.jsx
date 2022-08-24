@@ -27,19 +27,21 @@ const Setting = () => {
       });
     }
   };
-  
+
   return (
     <div>
       <h1>Setting</h1>
-    <div className="container">
-      {user && (
-        <>
-          <SettingForm user={user} />
-        </>
-      )}
+      <div className="container">
+        {user && (
+          <>
+            <SettingForm user={user} />
+          </>
+        )}
+      </div>
+      <div className="signout">
+        <a onClick={signOut}>Sign out</a>
+      </div>
     </div>
-    <a onClick={signOut}>Sign out</a>
-  </div>
   )
 }
 

@@ -1,3 +1,11 @@
-h1 {
-    text-align: center;
+.signout{
+    display: flex;
+    justify-content: flex-end;
+}
+.signout a:hover {
+    background-color: black;
+    color: white;
+    padding: 0.75rem;
+    border: 0;
+    border-radius: 0.5rem;
 }
