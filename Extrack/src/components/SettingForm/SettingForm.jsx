@@ -58,7 +58,8 @@ const SettingFrom = ({ user, signOut }) => {
                         <h2 id='goal-h2'>Update your goal</h2>
                         <div className='goal-form'>
                             <label>weekly goal</label>
-                            <input type='number' defaultValue={user.weekly_goal} placeholder='days per week' {...register('weekly_goal')} />
+                            <input type='number' defaultValue={user.weekly_goal} placeholder='days per week' {...register('weekly_goal'),{ max: { value: 7 } }} />
+                            {errors.weekly_goal && <p className='error'>Weekly can't exceed 7 days</p>}
                             <label>weight</label>
                             <input type='number' defaultValue={user.goal_weight} placeholder='goal weight' {...register('weight_goal')} />
                             <label>inspiration</label>

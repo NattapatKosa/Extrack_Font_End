@@ -54,7 +54,7 @@ const EditActivityForm = ({activity_id, selectedActivity, setSelectedActivity}) 
                     {errors.date && <p className='error'>Please enter the date</p>}
                     <br />
                     {/* <label for="duration">Duration</label><br /> */}
-                    <input type="number" placeholder='duration(minutes)' ref={register} {...register("duration", { min: { value: 0, message: "duration can't be zero" } })} />
+                    <input type="number" placeholder='duration(minutes)' ref={register} {...register("duration", { min: { value: 1, message: "duration can't be zero" } })} />
                     <p className='error'>{errors.duration?.message}</p>
                     {/* <br/> */}
                     {/* <label for="comment">Description</label><br /> */}

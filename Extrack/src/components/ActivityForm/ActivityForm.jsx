@@ -67,7 +67,7 @@ const ActivityForm = () => {
                     {errors.date && <p className='error'>Please enter the date</p>}
                     <br />
                     {/* <label for="duration">Duration</label><br /> */}
-                    <input type="number" placeholder='type your duration'  {...register("duration", { min: { value: 0 }, required: true })} />
+                    <input type="number" placeholder='type your duration'  {...register("duration", { min: { value: 1 }, required: true })} />
                     {errors.duration && <p className='error'>Duration can't be zero</p>}
                     <br />
                     {/* <label for="comment">Description</label><br /> */}
