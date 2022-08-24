@@ -43,8 +43,8 @@ const BarChart = ({ dailyStats, loading }) => {
       return date.toISOString().slice(0, 10);
     });
     // console.log('date', sevenDays)
-
-    const sevenDaysAgo = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000)
+    
+    const sevenDaysAgo = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000 + (7 * 60 * 60 * 1000))
 
     // get last 7 days' data
     let currentWeek = []
@@ -67,8 +67,12 @@ const BarChart = ({ dailyStats, loading }) => {
         weeklyStats[sevenDays[i]] = 0
       }
     }
+
+    const reversedValues = Object.values(weeklyStats).reverse();
     // console.log('weeklyStats', weeklyStats)
     setTrackingValue(Object.values(weeklyStats))
+    setTrackingValue(reversedValues)
+
     // set keys of chart
     // setTrackingName(Object.keys(weeklyStats))
     setTrackingName(getWeekDay(sevenDaysAgo))

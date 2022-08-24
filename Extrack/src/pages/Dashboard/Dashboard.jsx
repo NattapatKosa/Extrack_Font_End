@@ -33,7 +33,7 @@ const Dashboard = () => {
     setCards(response.data);
   };
 
-  const sevenDaysAgo = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000);
+  const sevenDaysAgo = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000 + (7 * 60 * 60 * 1000));
 
   let goalAchieved = 0;
   const getGoalAchieved = () => {
