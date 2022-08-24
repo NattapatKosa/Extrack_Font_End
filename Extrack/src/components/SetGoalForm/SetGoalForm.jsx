@@ -16,7 +16,7 @@ const  SetGoalForm = () => {
     .then(response => {
       console.log(response.data)
       window.alert('goal setted')
-      navigate('/activities');
+      navigate('/dashboard');
     }).catch(error => { console.log(error) });
 }
   
