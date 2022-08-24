@@ -15,7 +15,7 @@ function homePage() {
           <p>Make your life better with our help!</p>
           <ButtonHomePage />
         </div>
-        <img src="./public/assets/urban-line-woman-in-yoga-pose-line.gif" alt="" />
+        <img src="./assets/urban-line-woman-in-yoga-pose-line.gif" alt="" />
       </section>
 
       <section className="subcon2">
