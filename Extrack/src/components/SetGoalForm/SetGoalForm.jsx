@@ -23,7 +23,7 @@ const  SetGoalForm = () => {
   return (  
     <div className="setGoal">
       <div className="setGoalPic">
-        <img src='../../../public/assets/SetGoalImage.png' alt="pic"  />
+        <img src='./assets/SetGoalImage.png' alt="pic"  />
       </div>
       <div className="setGoalForm">
         <h2>Set Your Goal</h2>
