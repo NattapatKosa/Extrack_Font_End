@@ -11,7 +11,7 @@ const NavBar = () => {
     case "/":
       nav = <>
         <Link to="/signin">Sign In</Link>
-        <Link to="/signup">Get Statrted</Link>
+        <Link to="/signup">Get Started</Link>
       </>
       break;
     case "/signin":
