@@ -310,3 +310,10 @@ body {
     font-size: 20px;
     font-weight: 700;
   }
+
+  .container-dash
+  .subconleft-dash
+  .downleftsub-board
+  .head-recentact a {
+    margin-left: 700px;
+  }

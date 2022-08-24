@@ -8,6 +8,7 @@ import './SettingFrom.scss'
 
 const SettingFrom = ({ user, signOut }) => {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
+    const navigate = useNavigate();
 
 
 

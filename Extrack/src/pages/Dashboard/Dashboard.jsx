@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import BarChart from "../../components/BarChart/BarChart";
 import NavBar from "../../components/NavBar/NavBar";
 import axiosInstance from "../../configs/axios";
+import { Link } from "react-router-dom";
 import "./Dashboard.css";
 import CartList from "../../components/CartList/CardList";
 
@@ -103,6 +104,7 @@ const Dashboard = () => {
                 alt=""
               />
               <p>Recent Activities</p>
+              <Link to='/activities'><img src="./assets/icons8-menu-100.png" alt=""/></Link>
             </div>
             <div className="recent-content">
               <CartList cards={recentCards} />
